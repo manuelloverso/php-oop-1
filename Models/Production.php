@@ -10,14 +10,16 @@ class Production {
 
     }
 
-    function setVote(){
+    function setVote($vote){
         if ($this->vote > 10) {
-            $this->vote = 'invalid';
+            $vote= 'invalid';
+            $this->vote = $vote;
         }
          
     }
 
-    function setTitle(){
-        $this->title = ucwords($this->title);
+    function setTitle($title){
+        $title=ucwords($this->title);
+        $this->title = $title;
     }
 }

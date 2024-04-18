@@ -23,7 +23,7 @@ echo $productions[0]->genre->name;
     <h1>Productions</h1>
     <ol>
         <?php foreach ($productions as $production) : ?>
-            <li><?php echo "Title--> $production->title || Vote--> $production->vote || Language--> $production->language || Genre Name--> $production->genre->name " ?></li>
+            <li><?php echo "Title--> $production->title || Vote--> $production->vote || Language--> $production->language || Genre Name-->  " ?></li>
         <?php endforeach; ?>    
     </ol>
 </body>

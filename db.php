@@ -7,8 +7,8 @@ array_push($productions, new Production('dune', 'English', 7 ,new Genre('Sci-fi'
 var_dump($productions);
 //$productions[0]->setVote();
 foreach ($productions as $production){
-    $production->setVote();
-    $production->setTitle();
+    $production->setVote($production->vote);
+    $production->setTitle($production->title);
 }
 
 //echo $productions[0]->vote;
