@@ -3,7 +3,7 @@ include_once __DIR__ . '/Models/Production.php';
 include_once __DIR__ . '/Models/Genre.php';
 include_once __DIR__ . '/db.php';
 
-echo $productions[0]->genre->name;
+//echo $productions[0]->genre->name;
 
 ?>
 
@@ -23,7 +23,7 @@ echo $productions[0]->genre->name;
     <h1>Productions</h1>
     <ol>
         <?php foreach ($productions as $production) : ?>
-            <li><?php echo "Title--> $production->title || Vote--> $production->vote || Language--> $production->language || Genre Name-->  " ?></li>
+            <li><?php echo "Title--> $production->title || Vote--> $production->vote || Language--> $production->language || Genre Name--> {$production->genre->name} || Description--> {$production->genre->description} " ?></li>
         <?php endforeach; ?>    
     </ol>
 </body>
