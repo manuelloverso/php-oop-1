@@ -1,9 +1,15 @@
 <?php 
 include_once __DIR__ . '/Models/Production.php';
 
-$productions = [new Production('Lord of the Rings', 'english', 11) ];
+$productions = [new Production('Lord of the Rings', 'English', 11) ];
+
+array_push($productions, new Production('Dune', 'English', 7));
+
 var_dump($productions);
-$productions[0]->setVote();
+//$productions[0]->setVote();
+foreach ($productions as $production){
+    $production->setVote();
+}
 
 echo $productions[0]->vote;
 
@@ -17,6 +23,11 @@ echo $productions[0]->vote;
     <title>OOP 1</title>
 </head>
 <body>
-    
+    <h1>Productions</h1>
+    <ol>
+        <?php foreach ($productions as $production) : ?>
+            <li><?= "Title: $production->title ,Vote: $production->vote , Language: $production->language" ?></li>
+        <?php endforeach; ?>    
+    </ol>
 </body>
 </html>
