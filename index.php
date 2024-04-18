@@ -1,10 +1,11 @@
 <?php 
 include_once __DIR__ . '/Models/Production.php';
 
-$productions = [new Production('Lord of the Rings', 'english', 9) ];
+$productions = [new Production('Lord of the Rings', 'english', 11) ];
 var_dump($productions);
+$productions[0]->setVote();
 
-echo $productions[0]->language;
+echo $productions[0]->vote;
 
 ?>
 
