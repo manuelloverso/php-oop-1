@@ -14,4 +14,8 @@ class Production {
         }
          
     }
+
+    function setTitle(){
+        $this->title = ucwords($this->title);
+    }
 }
