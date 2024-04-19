@@ -2,6 +2,8 @@
 include_once __DIR__ . '/Models/Production.php';
 include_once __DIR__ . '/Models/Genre.php';
 include_once __DIR__ . '/Models/Movie.php';
+include_once __DIR__ . '/Models/Show.php';
+
 
 
 $productions = [new Production('Lord of the Rings', 'English', 11 , new Genre('Adventure', 'A journey of four hobbits')) ];
@@ -16,6 +18,10 @@ foreach ($productions as $production){
     $production->setTitle($production->title);
 };
 
-$new_movie = new Movie('Shrek', 'en', 8 , new Genre('fantasy', 'fantasy ok'), '100M', '2 hours');
-var_dump($new_movie);
+$shrek = new Movie('Shrek', 'en', 8 , new Genre('fantasy', 'fantasy ok'), '100M', '2 hours');
+$tlou = new Show('The last of us', 'en', 8 , new Genre('action', 'action ok'), 1);
+
+var_dump($shrek);
+var_dump($tlou);
+//array_push($productions , $new_movie);
 //echo $productions[0]->vote;

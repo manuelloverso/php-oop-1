@@ -35,6 +35,7 @@ include_once __DIR__ . '/db.php';
                             <h5>Genres:</h5>
                             <p><strong>- Name: </strong><?= $production->genre->name ?></p>
                             <p><strong>- Description: </strong><?= $production->genre->description ?></p>
+
                         </div>
                     </div>
                 </div>
