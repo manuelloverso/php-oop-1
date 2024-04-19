@@ -1,6 +1,5 @@
 <?php 
-include_once __DIR__ . '/Models/Production.php';
-include_once __DIR__ . '/Models/Genre.php';
+
 include_once __DIR__ . '/db.php';
 
 //echo $productions[0]->genre->name;
