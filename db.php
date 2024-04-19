@@ -20,6 +20,10 @@ foreach ($productions as $production){
 
 $shrek = new Movie('Shrek', 'en', 8 , new Genre('fantasy', 'fantasy ok'), '100M', '2 hours');
 $tlou = new Show('The last of us', 'en', 8 , new Genre('action', 'action ok'), 1);
+$got = new Show('Game of Thrones', 'en' ,9 , new Genre('fantasy', 'Dragons are dangerous, but people even more'), 8);
+
+$movies = [$shrek];
+$shows = [$tlou, $got];
 
 var_dump($shrek);
 var_dump($tlou);
