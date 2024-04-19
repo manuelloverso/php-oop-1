@@ -42,7 +42,8 @@ include_once __DIR__ . '/db.php';
                 ><?= $production->language ?>
               </p>
               <h5>Genres:</h5>
-              <p>
+              <?php if(gettype($production->genre)== 'object') : ?>
+                <p>
                 <strong>- Name: </strong
                 ><?= $production->genre->name ?>
               </p>
@@ -50,6 +51,20 @@ include_once __DIR__ . '/db.php';
                 <strong>- Description: </strong
                 ><?= $production->genre->description ?>
               </p>
+              <?php else : ?>
+                <?php foreach ($production->genre as $genre) : ?>
+                <p>
+                <strong>- Name: </strong>
+                <?= $genre->name ?>
+              </p>
+              <p>
+                <strong>- Description: </strong
+                ><?= $genre->description ?>
+              </p>
+              <?php endforeach?>
+              <?php endif ?>
+
+             
             </div>
           </div>
         </div>

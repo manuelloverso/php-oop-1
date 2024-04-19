@@ -1,7 +1,7 @@
 <?php 
 
 class Production {
-    public function __construct(public string $title, public string $language, public $vote , public Genre $genre )
+    public function __construct(public string $title, public string $language, public $vote , public $genre )
     {
         $this->title = $title;
         $this->language = $language;
