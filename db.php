@@ -31,7 +31,7 @@ $got = new Show('Game of Thrones', 'en' ,9 , new Genre('fantasy', 'Dragons are d
 $movies = [$shrek];
 $shows = [$tlou, $got];
 
-var_dump($shrek);
-var_dump($tlou);
+//var_dump($shrek);
+//var_dump($tlou);
 //array_push($productions , $new_movie);
 //echo $productions[0]->vote;
